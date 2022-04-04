@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class Run_Test : MonoBehaviour
 {
-   
+
     public float speed = 4f;
+    public float speedRotate = 100f;
     private Light myLight;//приватная переменная не отобразится в юнити 
-    public GameObject spher;//сюда можно притащить объект и обращаться к нему
+    public GameObject person;//сюда можно притащить объект и обращаться к нему
     void Start()
     {
-        myLight = GetComponent <Light>(); //myLight<--переменная = GetComponent<-- функция для выбора Компонента, сам Компонент--> <Light>();
+        myLight = GetComponent<Light>(); //myLight<--переменная = GetComponent<-- функция для выбора Компонента, сам Компонент--> <Light>();
+         
     }
-  
+
     void Update()
     {
        //выключение света 
@@ -24,20 +26,28 @@ public class Run_Test : MonoBehaviour
         }
 
        //изсенение цвета объекта по кнопке 
-       if (Input.GetKey(KeyCode.F))
+       if (Input.GetKey(KeyCode.C))
         {
-            spher.GetComponent <Renderer>().material.color =Color.black;//изменение цвета перерендер объекта полагаю
+            person.GetComponent <Renderer>().material.color =Color.black;//изменение цвета перерендер объекта полагаю
             
         }
         //перемещение
         if (Input.GetKey(KeyCode.W))
-            spher.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            person.transform.Translate(Vector3.forward * speed * Time.deltaTime);
         if (Input.GetKey(KeyCode.S))
-            spher.transform.Translate(-Vector3.forward * speed * Time.deltaTime);
+            person.transform.Translate(-Vector3.forward * speed * Time.deltaTime);
         if (Input.GetKey(KeyCode.A))
-            spher.transform.Translate(Vector3.left * speed * Time.deltaTime);
+            person.transform.Translate(Vector3.left * speed * Time.deltaTime);
         if (Input.GetKey(KeyCode.D))
-            spher.transform.Translate(Vector3.right * speed * Time.deltaTime);
-        
+            person.transform.Translate(Vector3.right * speed * Time.deltaTime);
+        //поворот
+        if (Input.GetKey(KeyCode.Q))
+            person.transform.Rotate(-Vector3.up * speedRotate * Time.deltaTime);
+        if (Input.GetKey(KeyCode.E))
+            person.transform.Rotate(Vector3.up * speedRotate * Time.deltaTime);
+        if (Input.GetKey(KeyCode.RightAlt))
+            person.transform.Rotate(-Vector3.left * speedRotate * Time.deltaTime);
+        if (Input.GetKey(KeyCode.LeftAlt))
+            person.transform.Rotate(Vector3.left * speedRotate * Time.deltaTime);
     }
 }
