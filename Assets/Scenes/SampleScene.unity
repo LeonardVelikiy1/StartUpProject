@@ -248,7 +248,6 @@ GameObject:
   - component: {fileID: 539294596}
   - component: {fileID: 539294595}
   - component: {fileID: 539294594}
-  - component: {fileID: 539294593}
   - component: {fileID: 539294598}
   - component: {fileID: 539294597}
   m_Layer: 0
@@ -272,19 +271,6 @@ Transform:
   m_Father: {fileID: 1623270432}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &539294593
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539294591}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0644779, y: 1, z: 0.99999976}
-  m_Center: {x: -0.008179665, y: 0, z: 0}
 --- !u!114 &539294594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,14 +278,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539294591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be177974d1d38d44bbe4d0070f738f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   contact: 0
   door: {fileID: 1623270428}
-  OpenDoor: {fileID: 0}
 --- !u!23 &539294595
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -362,7 +347,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 67edf3e7797583543bc8e58b463dba1b, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &539294598
@@ -378,8 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contact: 0
-  door: {fileID: 0}
-  OpenDoor: {fileID: 0}
+  door: {fileID: 539294591}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,10 +567,10 @@ GameObject:
   - component: {fileID: 1623270432}
   - component: {fileID: 1623270431}
   - component: {fileID: 1623270430}
-  - component: {fileID: 1623270429}
   - component: {fileID: 1623270434}
   - component: {fileID: 1623270435}
   - component: {fileID: 1623270433}
+  - component: {fileID: 1623270429}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -594,8 +578,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1623270429
-CapsuleCollider:
+--- !u!65 &1623270429
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -604,10 +588,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 2
+  m_Size: {x: 5.539015, y: 2.3324134, z: 1.0000002}
+  m_Center: {x: -2.2695272, y: -0.044509415, z: -0.00000009495534}
 --- !u!23 &1623270430
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -685,7 +668,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 67edf3e7797583543bc8e58b463dba1b, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!95 &1623270434
@@ -721,7 +704,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contact: 0
   door: {fileID: 1623270428}
-  OpenDoor: {fileID: 1623270433}
 --- !u!1 &1666719912
 GameObject:
   m_ObjectHideFlags: 0
