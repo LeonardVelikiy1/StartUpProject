@@ -249,6 +249,8 @@ GameObject:
   - component: {fileID: 539294595}
   - component: {fileID: 539294594}
   - component: {fileID: 539294593}
+  - component: {fileID: 539294598}
+  - component: {fileID: 539294597}
   m_Layer: 0
   m_Name: Door (1)
   m_TagString: Untagged
@@ -263,7 +265,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539294591}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.36, y: -0.04378665, z: 0.04}
   m_LocalScale: {x: 5.1673017, y: 2.3141677, z: 0.93197185}
   m_Children: []
@@ -295,11 +297,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be177974d1d38d44bbe4d0070f738f9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedrotation: 200
   contact: 0
   door: {fileID: 1623270428}
-  i: 1
-  iterations: 0
+  OpenDoor: {fileID: 0}
 --- !u!23 &539294595
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -349,6 +349,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539294591}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!111 &539294597
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539294591}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 67edf3e7797583543bc8e58b463dba1b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 67edf3e7797583543bc8e58b463dba1b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &539294598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539294591}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be177974d1d38d44bbe4d0070f738f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contact: 0
+  door: {fileID: 0}
+  OpenDoor: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +584,9 @@ GameObject:
   - component: {fileID: 1623270431}
   - component: {fileID: 1623270430}
   - component: {fileID: 1623270429}
+  - component: {fileID: 1623270434}
+  - component: {fileID: 1623270435}
+  - component: {fileID: 1623270433}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -630,14 +664,64 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623270428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.0012216415, z: -0, w: -0.9999993}
   m_LocalPosition: {x: -13.4, y: 0.787, z: -5.75}
   m_LocalScale: {x: 0.1935246, y: 0.685141, z: 0.23388046}
   m_Children:
   - {fileID: 539294592}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -360.14, z: 0}
+--- !u!111 &1623270433
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623270428}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 67edf3e7797583543bc8e58b463dba1b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 67edf3e7797583543bc8e58b463dba1b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &1623270434
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623270428}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 94a335ef6413c704fba537d24281be20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1623270435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623270428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be177974d1d38d44bbe4d0070f738f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contact: 0
+  door: {fileID: 1623270428}
+  OpenDoor: {fileID: 1623270433}
 --- !u!1 &1666719912
 GameObject:
   m_ObjectHideFlags: 0
