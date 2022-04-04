@@ -45,9 +45,6 @@ public class Run_Test : MonoBehaviour
             person.transform.Rotate(-Vector3.up * speedRotate * Time.deltaTime);
         if (Input.GetKey(KeyCode.E))
             person.transform.Rotate(Vector3.up * speedRotate * Time.deltaTime);
-        if (Input.GetKey(KeyCode.RightAlt))
-            person.transform.Rotate(-Vector3.left * speedRotate * Time.deltaTime);
-        if (Input.GetKey(KeyCode.LeftAlt))
-            person.transform.Rotate(Vector3.left * speedRotate * Time.deltaTime);
+      
     }
 }
