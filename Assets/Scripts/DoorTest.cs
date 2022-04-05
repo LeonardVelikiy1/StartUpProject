@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class TrigerTest : MonoBehaviour
+public class DoorTest : MonoBehaviour
 {
-    
+    private bool _isOpened;
+    private Animator _animator;
     public int contact = 0;
-    public GameObject door;
-    public int doorOpen;
 
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -17,26 +19,24 @@ public class TrigerTest : MonoBehaviour
         print("Есть контакт");
         print(contact);
     }
-    void Update()
+    public void Update()
     {
+        Open();
+    }
+    public void Open()
+    {
+        
         if (contact > 0)
         {
             if (Input.GetKey(KeyCode.F))
             {
-                StartCoroutine(DoorTame());
+                _animator.SetBool("IsOpened", _isOpened);
+                _isOpened = !_isOpened;
             }
+            
         }
+       
     }
-    IEnumerator DoorTame()
-    {
-        doorOpen++;
-        Animation OpenDoor = GetComponent<Animation>();
-        OpenDoor.Play();
-        yield return new WaitForSeconds(2);
-        OpenDoor.Stop();
-    }
-
-    
     private void OnCollisionExit(Collision collision)
     {
         contact--;
@@ -44,4 +44,3 @@ public class TrigerTest : MonoBehaviour
         print(contact);
     }
 }
-
