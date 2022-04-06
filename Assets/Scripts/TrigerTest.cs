@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class TrigerTest : MonoBehaviour
 {
-    
-    public int contact = 0;
+
+    /*public int contact = 0;
     public GameObject door;
     public int doorOpen;
 
@@ -42,6 +42,18 @@ public class TrigerTest : MonoBehaviour
         contact--;
         print("Нет контакта");
         print(contact);
+    }*/
+    private void Update()
+    {
+        Interack();
+    }
+    public void Interack() 
+    {
+        
+        if (Input.GetKey(KeyCode.F))
+        {
+            
+        }
     }
 }
 

@@ -7,6 +7,9 @@ public class DoorTest : MonoBehaviour
     private bool _isOpened;
     private Animator _animator;
     public int contact = 0;
+    public int iteration = 0;
+    private bool LastStateand;
+    private bool LastStateandDoor;
 
     private void Start()
     {
@@ -28,11 +31,17 @@ public class DoorTest : MonoBehaviour
         
         if (contact > 0)
         {
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKey(KeyCode.F) != LastStateand)
             {
                 _animator.SetBool("IsOpened", _isOpened);
                 _isOpened = !_isOpened;
+                iteration++;
+                LastStateand = !Input.GetKey(KeyCode.F);
             }
+ /*           if (Input.GetKey(KeyCode.F))
+            {
+                
+            }*/
             
         }
        
