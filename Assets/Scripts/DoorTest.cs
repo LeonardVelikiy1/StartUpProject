@@ -38,10 +38,6 @@ public class DoorTest : MonoBehaviour
                 iteration++;
                 LastStateand = !Input.GetKey(KeyCode.F);
             }
- /*           if (Input.GetKey(KeyCode.F))
-            {
-                
-            }*/
             
         }
        
