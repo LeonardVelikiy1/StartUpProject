@@ -301,8 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52277174573ecdb479b795bfd5f845b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isOpened: 0
   contact: 0
-  iteration: 0
 --- !u!23 &539294595
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -476,7 +476,7 @@ GameObject:
   - component: {fileID: 849559249}
   - component: {fileID: 849559254}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -781,8 +781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52277174573ecdb479b795bfd5f845b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isOpened: 0
   contact: 0
-  iteration: 0
 --- !u!95 &1623270434
 Animator:
   serializedVersion: 3
