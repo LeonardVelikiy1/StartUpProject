@@ -22,7 +22,6 @@ public class DoorTest : MonoBehaviour
     }
     public void Update()
     {
-
         Open();
     }
     public void Open()

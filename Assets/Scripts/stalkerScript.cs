@@ -6,7 +6,7 @@ public class stalkerScript : MonoBehaviour
 {
     public GameObject cube;
     public float speed = 5f;
-    private Transform target;
+    public Transform target;
     private float seeDistance = 10f;
     private float attackDistance = 1f;
     void OnTriggerEnter(Collider other)

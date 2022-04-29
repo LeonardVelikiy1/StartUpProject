@@ -36,15 +36,16 @@ public class Run_Test : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
             person.transform.Translate(-Vector3.forward * speed * Time.deltaTime);
         if (Input.GetKey(KeyCode.A))
-            person.transform.Translate(Vector3.left * speed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.D))
             person.transform.Translate(Vector3.right * speed * Time.deltaTime);
-        
+        if (Input.GetKey(KeyCode.D))
+            person.transform.Translate(Vector3.left * speed * Time.deltaTime);
+
+
         //поворот камеры, на данный момент (28.04.22) не нужен
         /*if (Input.GetKey(KeyCode.Q))
             person.transform.Rotate(-Vector3.up * speedRotate * Time.deltaTime);
         if (Input.GetKey(KeyCode.E))
             person.transform.Rotate(Vector3.up * speedRotate * Time.deltaTime);*/
-      
+
     }
 }
