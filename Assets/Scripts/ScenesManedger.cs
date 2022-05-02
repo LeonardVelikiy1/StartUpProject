@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +7,7 @@ public class ScenesManedger : MonoBehaviour
     {
         BatleFase();
     }
-    public void BatleFase(int _sceneNumber = 1) 
+    public void BatleFase(int _sceneNumber = 2) 
     {
         SceneManager.LoadScene(_sceneNumber);
     }

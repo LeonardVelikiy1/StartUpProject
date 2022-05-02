@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Checking_moves : MonoBehaviour
 {
-    public bool enemisMove = true;//где true это ход врага а false наш ход 
+    public bool enemisMove = false; //где true это ход врага а false наш ход 
     private int enemiHP = 100;
     private int heroHP = 100;
     private int ManaHero = 30;
@@ -60,12 +58,12 @@ public class Checking_moves : MonoBehaviour
             if(heroHP <= 0)
             {
                 print("вы умерли");
-                BatleFase();
+                BattleLose();
             }
             if (enemiHP <= 0)
             {
                 print("вы победили");
-                BatleFase();
+                BattleWin();
             }
         }
     }
@@ -88,7 +86,12 @@ public class Checking_moves : MonoBehaviour
         }
         
     }
-    public void BatleFase(int _sceneNumber = 0)
+    public void BattleLose(int _sceneNumber = 0)
+    {
+        SceneManager.LoadScene(_sceneNumber);
+    }
+
+    public void BattleWin(int _sceneNumber = 1)
     {
         SceneManager.LoadScene(_sceneNumber);
     }
