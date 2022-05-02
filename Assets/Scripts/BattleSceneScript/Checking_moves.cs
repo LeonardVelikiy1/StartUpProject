@@ -86,7 +86,7 @@ public class Checking_moves : MonoBehaviour
         }
         
     }
-    public void BattleLose(int _sceneNumber = 0)
+    public void BattleLose(int _sceneNumber = 3)
     {
         SceneManager.LoadScene(_sceneNumber);
     }
