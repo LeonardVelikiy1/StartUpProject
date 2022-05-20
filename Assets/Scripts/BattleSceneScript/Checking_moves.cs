@@ -9,9 +9,9 @@ public class Checking_moves : MonoBehaviour
     private int heroHP = 100;
     private int ManaHero = 30;
     private int MadnesEnemi = 0;
-    public TextMesh HpTextHero;
+    public Text HpTextHero;
     public TextMesh HpTextEnemi;
-    public TextMesh Mana;
+    public Text Mana;
 
     //public Text Madnes;
 
