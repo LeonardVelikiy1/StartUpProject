@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 7cabb227616f3b643b7f55352db4c025
+  - enabled: 1
+    path: Assets/Scenes/UpFight.unity
+    guid: 9144fd07c065a774fbbcd5e6c96f3edd
   m_configObjects: {}

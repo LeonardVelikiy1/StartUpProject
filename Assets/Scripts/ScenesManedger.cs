@@ -7,8 +7,8 @@ public class ScenesManedger : MonoBehaviour
     {
         BatleFase();
     }
-    public void BatleFase(int _sceneNumber = 2) 
+    public void BatleFase() 
     {
-        SceneManager.LoadScene(_sceneNumber);
+        SceneManager.LoadScene(Tester.pron);
     }
 }

@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class Run_Test : MonoBehaviour
 {
     
-    public float speed = 4f;
+    public float speed = 100f;
     public float speedRotate = 100f;
     private Light myLight;//приватная переменная не отобразится в юнити 
     public GameObject person;//сюда можно притащить объект и обращаться к нему
@@ -48,4 +47,9 @@ public class Run_Test : MonoBehaviour
             person.transform.Rotate(Vector3.up * speedRotate * Time.deltaTime);*/
 
     }
+    
+}
+public static class Tester
+{
+    public const  int pron = 2; 
 }
