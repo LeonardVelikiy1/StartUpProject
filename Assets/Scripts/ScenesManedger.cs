@@ -9,6 +9,7 @@ public class ScenesManedger : MonoBehaviour
     }
     public void BatleFase() 
     {
+        int a = 3;
         SceneManager.LoadScene(Tester.pron);
     }
 }
