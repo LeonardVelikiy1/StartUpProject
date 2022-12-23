@@ -16,7 +16,7 @@ public class UpFigthScene : MonoBehaviour
         Enemy WAR = new Enemy();
         //WAR.TypeIdEnemy = gameObject.GetComponent<Enemy>().TypeIdEnemy;
         int aaa = gameObject.GetComponent<Enemy>().TypeIdEnemy;
-        Enemy.TypeIdEnemy = aaa;
+        // Enemy.TypeIdEnemy = aaa;
         //попробуй создать новый скрипт для переназначения получаемых даных либо упрости в хард коде 
         //(проект сложный и первый так что не выебывайся)
         print(gameObject.GetComponent<Enemy>().TypeIdEnemy.ToString());
